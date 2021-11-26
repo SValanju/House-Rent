@@ -1,0 +1,1314 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Apartment</title>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="stylesheet" type="text/css" href="booking.css">
+
+	<link href="https://fonts.googleapis.com/css2?family=Vidaloka&display=swap" rel="stylesheet">
+
+	<script src="https://kit.fontawesome.com/83772345fd.js" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+<body>
+
+	<div class="navigationBar py-3">
+		<div class="container">
+			<nav>
+				<div class="row m-0 align-items-center">
+					<div class="col-md-2 col-1 pr-0 mob-menu">
+						<a href="#" id="openMobnav">
+							<i class="fas fa-bars"></i>
+						</a>
+					</div>
+					<div class="col-md-4 col-8">
+						<a href="index.html" class="navbar-brand">
+							<img src="logo.png" class="img-fluid">
+						</a>
+					</div>
+					<div class="col-md-6 col-3 d-flex justify-content-end ml-auto p-0">					
+						<div class="ntr">
+							<span class="mobHide">
+								<a href="#">
+									<i class="fas fa-phone-square-alt mr-2"></i><span>CALL US - 01623 030020</span>
+								</a>
+								<a href="" data-toggle="modal" data-target="#logregModal">
+									<i class="fas fa-address-book mr-2"></i><span>LOGIN / REGISTER</span>
+								</a>
+							</span>
+							<a href="#" id="openSearch">
+								<i class="fas fa-search"></i>
+							</a>
+							<a href="#" id="openNav" class="mob-R-menu mobHide">
+								<i class="fas fa-bars"></i>
+							</a>
+							<a href="#" class="mob-R-menu lappyHide">
+								<i class="fas fa-sliders-h"></i>
+							</a>
+						</div>
+					</div>
+					<div class="col-md-8 p-0">
+						<div class="bottomNav py-2" id="MobNAV">
+							<div class="hidecontent d-flex justify-content-between">
+								<span>Menu</span>
+								<a href="javascript:void(0)" id="closeMobnav">&times;</a>
+							</div>
+							
+							<ul>
+								<li><a href="index.html">Home</a></li>
+								<li>
+									<a href="#">House<i class="fas fa-caret-down ml-2"></i></a>
+									<ul>
+										<li><a href="House1.html">Apartment Single</a></li>
+										<li><a href="#">Item 2</a></li>
+										<li><a href="#">Item 3</a></li>
+									</ul>
+								</li>
+								<li>
+									<a href="#">Pages<i class="fas fa-caret-down ml-2"></i></a>
+									<ul>
+										<li><a href="#">Item 1</a></li>
+										<li><a href="#">Item 2</a></li>
+										<li><a href="#">Item 3</a></li>
+									</ul>
+								</li>
+								<li>
+									<a href="#">Blogs<i class="fas fa-caret-down ml-2"></i></a>
+									<ul>
+										<li><a href="#">Item 1</a></li>
+										<li><a href="#">Item 2</a></li>
+										<li><a href="#">Item 3</a></li>
+									</ul>
+								</li>
+								<li><a href="about.html">About</a></li>
+								<li><a href="contact.html">Contact</a></li>
+								<li class="LapHide">
+									<a href="#">
+										<i class="fas fa-phone-square-alt mr-2"></i><span>CALL US - 01623 030020</span>
+									</a>
+								</li>
+								<li class="LapHide">
+									<a href="" data-toggle="modal" data-target="#logregModal">
+										<i class="fas fa-address-book mr-2"></i><span>LOGIN / REGISTER</span>
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-md-4 p-0 d-flex justify-content-end">
+						<a href="booking.html" class="m-0 bking">BOOKING</a>
+					</div>
+				</div>
+			</nav>
+
+			<div class="modal fade" id="logregModal" aria-labelledby="logregModalLabel" aria-hidden="true">
+				<div class="modal-dialog modal-dialog-centered">
+					<div class="modal-content">
+						<div class="modal-body">
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+								<span aria-hidden="true">&times;</span>
+							</button>
+							<ul class="nav nav-tabs row m-0" id="nav-tab" role="tablist">
+								<li class="nav-item col-md-6 col-6 p-0 text-center" role="presentation">
+									<a class="nav-link active" id="login-tab" data-toggle="tab" href="#login" role="tab" aria-controls="login" aria-selected="true"><strong>Sign in</strong></a>
+								</li>
+								<li class="nav-item col-md-6 col-6 p-0 text-center" role="presentation">
+									<a class="nav-link" id="register-tab" data-toggle="tab" href="#register" role="tab" aria-controls="register" aria-selected="false"><strong>Register</strong></a>
+								</li>
+							</ul>
+							<div class="tab-content" id="myTabContent">
+								<div class="tab-pane fade show active" id="login" role="tabpanel" aria-labelledby="login-tab">
+									<form class="my-5">
+										<input type="email" class="form-control my-4 py-4" name="email" placeholder="&#xf0e0   Email" style="font-family: FontAwesome">
+										<input type="password" class="form-control my-4 py-4" name="password" placeholder="&#xf084   Password" style="font-family: FontAwesome">
+										<div class="form-check my-4">
+											<input class="form-check-input" type="checkbox" value="" id="rememberCheck" checked>
+											<label class="form-check-label" for="rememberCheck"><strong>Remember Me</strong></label>
+										</div>
+										<button class="btn btn-block btn-primary">LOGIN</button>
+									</form>
+								</div>
+								<div class="tab-pane fade" id="register" role="tabpanel" aria-labelledby="register-tab">
+									<form class="my-5">
+										<input type="email" class="form-control my-4 py-4" name="email" placeholder="&#xf007   Username" style="font-family: FontAwesome">
+										<input type="email" class="form-control my-4 py-4" name="email" placeholder="&#xf0e0   Email" style="font-family: FontAwesome">
+										<input type="password" class="form-control my-4 py-4" name="password" placeholder="&#xf084   Password" style="font-family: FontAwesome">
+										<div class="form-check my-4">
+											<input class="form-check-input" type="checkbox" value="" id="rememberCheck">
+											<label class="form-check-label" for="rememberCheck"><strong>I agree to the <a href="#" class="t-cModal">Terms & Conditions</a></strong></label>
+										</div>
+										<button class="btn btn-block btn-primary">CREATE ACCOUNT</button>
+									</form>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="mySearchMenu">
+				<div class="overlay" id="mySearch">
+					<a href="javascript:void(0)" class="closebtn" id="closeSearch">&times;</a>
+					<div class="overlay-content">
+						<form class="form-inline my-2 my-lg-0 d-flex justify-content-center">
+							<input class="form-control form-control-lg" type="search" placeholder="Search" aria-label="Search">
+							<button class="btn btn-success btn-lg my-2"><i class="fas fa-search"></i></button>
+						</form>
+					</div>
+				</div>
+			</div>
+
+			<div class="myMenu">
+				<div class="overlay" id="myNav">
+					<a href="javascript:void(0)" class="closebtn" id="closeNav">&times;</a>
+					<div class="overlay-content">
+						<a href="#">Home</a>
+						<div class="dropdown">
+							<a href="javascript:mydropFunction()" class="dropbtn align-items-center">Dropdown<i class="fas fa-caret-down ml-5"></i></a>
+							<div class="dropdown-content" id="myDropdown">
+								<a href="#">Link 1</a>
+								<a href="#">Link 2</a>
+								<a href="#">Link 3</a>
+							</div>
+						</div>
+						<a href="#">Work</a>
+				      	<a href="#">Clients</a>
+				      	<a href="#">Contact</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript">
+			//search icon
+			$('#openSearch').on('click', function(){
+				$('#mySearch').css("width", "100%");
+			});
+
+			$('#closeSearch').on('click', function(){
+				$('#mySearch').css("width", "0%");
+			});
+
+			//right menu icon
+			$('.mob-R-menu').on('click', function() {
+				$('#myNav').css("width", "100%");
+			});
+
+			$('#closeNav').on('click', function() {
+				$('#myNav').css("width", "0%");
+			});
+
+			//left menu icon
+			$('#openMobnav').on('click', function(){
+				$('#MobNAV').css("display", "block");
+			});
+
+			$('#closeMobnav').on('click', function(){
+				$('#MobNAV').css("display", "none");
+			});
+
+			//dropdown function
+	  		function mydropFunction() {
+	  			document.getElementById("myDropdown").classList.toggle("show");
+	  		}
+
+	  		window.onclick = function(event) {
+	  			if (!event.target.matches('.dropbtn')) {
+	  				var dropdowns = document.getElementsByClassName("dropdown-content");
+	  				var i;
+	  				for (i = 0; i < dropdowns.length; i++) {
+	  					var openDropdown = dropdowns[i];
+	  					if (openDropdown.classList.contains('show')) {
+	  						openDropdown.classList.remove('show');
+	  					}
+	  				}
+	  			}
+	  		}
+	  	</script>
+	</div>
+
+	<div class="pageHeading text-center py-5">
+		<h1><strong>Choose Apartment</strong></h1>
+		<h5><strong>Take A Apartment For Booking</strong></h5>
+	</div>
+
+	<div class="banner pb-5">
+		<div class="container">
+			<nav aria-label="breadcrumb">
+				<ol class="breadcrumb">
+					<li class="breadcrumb-item"><a href="index.html">Home</a></li>
+					<li class="breadcrumb-item active" aria-current="page">Apartment List for Booking</li>
+				</ol>
+			</nav>
+
+			<div class="btn-tabs">
+				<div class="row tabsBox mx-0 py-5">
+					<div class="col-md-9 p-0">
+						<ul class="nav nav-pills mb-3 text-center" id="pills-tab" role="tablist">
+							<li class="nav-item" role="presentation">
+								<a class="nav-link active" id="pills-popular-tab" data-toggle="pill" href="#pills-popular" role="tab" aria-controls="pills-popular" aria-selected="true">Popular</a>
+							</li>
+							<li class="nav-item" role="presentation">
+								<a class="nav-link" id="pills-date1-tab" data-toggle="pill" href="#pills-date1" role="tab" aria-controls="pills-date1" aria-selected="false">Date<p>Newest to Oldest</p></a>
+							</li>
+							<li class="nav-item" role="presentation">
+								<a class="nav-link" id="pills-date2-tab" data-toggle="pill" href="#pills-date2" role="tab" aria-controls="pills-date2" aria-selected="false">Date<p>Older to Newest</p></a>
+							</li>
+							<li class="nav-item" role="presentation">
+								<a class="nav-link" id="pills-price1-tab" data-toggle="pill" href="#pills-price1" role="tab" aria-controls="pills-price1" aria-selected="false">Price<p>Low to High</p></a>
+							</li>
+							<li class="nav-item" role="presentation">
+								<a class="nav-link" id="pills-price2-tab" data-toggle="pill" href="#pills-price2" role="tab" aria-controls="pills-price2" aria-selected="false">Price<p>High to Low</p></a>
+							</li>
+						</ul>
+					</div>
+					<div class="col-md-3 p-0 text-right">
+						<div class="category">
+							<button onclick="categoryDropdown()" class="btn catgybtn">Category<i class="fas fa-chevron-down ml-3"></i></button>
+							<div id="catgyDrop" class="dropdown-category">
+								<a href="#">Family</a>
+								<a href="#">Apartment</a>
+								<a href="#">Sublet</a>
+								<a href="#">Bachelor Mess</a>
+								<a href="#">Office</a>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="tabsDropdown">
+					<div class="form-group">
+					    <select class="form-control">
+					      <option>Popular</option>
+					      <option>Date Newest to Oldest</option>
+					      <option>Date Oldest to Newest</option>
+					      <option>Price Low to High</option>
+					      <option>Prie High to Low</option>
+					      <optgroup label="Category">
+					      	<option>Family</option>
+					      	<option>Apartment</option>
+					      	<option>Sublet</option>
+					      	<option>Bachelor Mess</option>
+					      	<option>Office</option>
+					      </optgroup>
+					    </select>
+					</div>
+				</div>
+
+				<div class="tab-content" id="pills-tabContent">
+					<div class="tab-pane fade show active" id="pills-popular" role="tabpanel" aria-labelledby="pills-popular-tab">
+						<div class="card-deck my-4">
+							<div class="card">
+								<img src="apartment-one.png" class="img-fluid card-img-top rounded">
+								<div class="card-body">
+									<h5 class="card-title"><strong>Family Apartment</strong></h5>
+									<h6 class="text-muted"><i class="fas fa-map-marker-alt mr-2"></i>Dhanmondi, Dhaka</h6>
+								</div>
+								<div class="card-footer " style="background-color: #ffffff;">
+									<span class="mr-2 text-muted"><i class="fas fa-bed mr-2"></i>3 Bedrooms</span>
+									<span class="mx-2 text-muted"><i class="fas fa-bath mr-2"></i>2 Bathrooms</span>
+									<div class="row pt-3">
+										<div class="col-6">
+											<h5><strong>&#36;200</strong></h5>
+										</div>
+										<div class="col-6 d-flex justify-content-end">
+											<span class="text-muted"><i class="fas fa-share-alt mr-3"></i><i class="far fa-star"></i></span>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="card">
+								<img src="apartment-two.png" class="img-fluid card-img-top rounded">
+								<div class="card-body">
+									<h5 class="card-title"><strong>Family Apartment</strong></h5>
+									<h6 class="text-muted"><i class="fas fa-map-marker-alt mr-2"></i>Dhanmondi, Dhaka</h6>
+								</div>
+								<div class="card-footer " style="background-color: #ffffff;">
+									<span class="mr-2 text-muted"><i class="fas fa-bed mr-2"></i>3 Bedrooms</span>
+									<span class="mx-2 text-muted"><i class="fas fa-bath mr-2"></i>2 Bathrooms</span>
+									<div class="row pt-3">
+										<div class="col-6">
+											<h5><strong>&#36;200</strong></h5>
+										</div>
+										<div class="col-6 d-flex justify-content-end">
+											<span class="text-muted"><i class="fas fa-share-alt mr-3"></i><i class="far fa-star"></i></span>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="card">
+								<img src="apartment-three.png" class="img-fluid card-img-top rounded">
+								<div class="card-body">
+									<h5 class="card-title"><strong>Family Apartment</strong></h5>
+									<h6 class="text-muted"><i class="fas fa-map-marker-alt mr-2"></i>Dhanmondi, Dhaka</h6>
+								</div>
+								<div class="card-footer " style="background-color: #ffffff;">
+									<span class="mr-2 text-muted"><i class="fas fa-bed mr-2"></i>3 Bedrooms</span>
+									<span class="mx-2 text-muted"><i class="fas fa-bath mr-2"></i>2 Bathrooms</span>
+									<div class="row pt-3">
+										<div class="col-6">
+											<h5><strong>&#36;200</strong></h5>
+										</div>
+										<div class="col-6 d-flex justify-content-end">
+											<span class="text-muted"><i class="fas fa-share-alt mr-3"></i><i class="far fa-star"></i></span>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="card-deck my-4">
+							<div class="card">
+								<img src="apartment-four.png" class="img-fluid card-img-top rounded">
+								<div class="card-body">
+									<h5 class="card-title"><strong>Family Apartment</strong></h5>
+									<h6 class="text-muted"><i class="fas fa-map-marker-alt mr-2"></i>Dhanmondi, Dhaka</h6>
+								</div>
+								<div class="card-footer " style="background-color: #ffffff;">
+									<span class="mr-2 text-muted"><i class="fas fa-bed mr-2"></i>3 Bedrooms</span>
+									<span class="mx-2 text-muted"><i class="fas fa-bath mr-2"></i>2 Bathrooms</span>
+									<div class="row pt-3">
+										<div class="col-6">
+											<h5><strong>&#36;200</strong></h5>
+										</div>
+										<div class="col-6 d-flex justify-content-end">
+											<span class="text-muted"><i class="fas fa-share-alt mr-3"></i><i class="far fa-star"></i></span>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="card">
+								<img src="apartment-five.png" class="img-fluid card-img-top rounded">
+								<div class="card-body">
+									<h5 class="card-title"><strong>Family Apartment</strong></h5>
+									<h6 class="text-muted"><i class="fas fa-map-marker-alt mr-2"></i>Dhanmondi, Dhaka</h6>
+								</div>
+								<div class="card-footer " style="background-color: #ffffff;">
+									<span class="mr-2 text-muted"><i class="fas fa-bed mr-2"></i>3 Bedrooms</span>
+									<span class="mx-2 text-muted"><i class="fas fa-bath mr-2"></i>2 Bathrooms</span>
+									<div class="row pt-3">
+										<div class="col-6">
+											<h5><strong>&#36;200</strong></h5>
+										</div>
+										<div class="col-6 d-flex justify-content-end">
+											<span class="text-muted"><i class="fas fa-share-alt mr-3"></i><i class="far fa-star"></i></span>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="card">
+								<img src="apartment-six.png" class="img-fluid card-img-top rounded">
+								<div class="card-body">
+									<h5 class="card-title"><strong>Family Apartment</strong></h5>
+									<h6 class="text-muted"><i class="fas fa-map-marker-alt mr-2"></i>Dhanmondi, Dhaka</h6>
+								</div>
+								<div class="card-footer " style="background-color: #ffffff;">
+									<span class="mr-2 text-muted"><i class="fas fa-bed mr-2"></i>3 Bedrooms</span>
+									<span class="mx-2 text-muted"><i class="fas fa-bath mr-2"></i>2 Bathrooms</span>
+									<div class="row pt-3">
+										<div class="col-6">
+											<h5><strong>&#36;200</strong></h5>
+										</div>
+										<div class="col-6 d-flex justify-content-end">
+											<span class="text-muted"><i class="fas fa-share-alt mr-3"></i><i class="far fa-star"></i></span>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="card-deck my-4">
+							<div class="card">
+								<img src="apartment-one.png" class="img-fluid card-img-top rounded">
+								<div class="card-body">
+									<h5 class="card-title"><strong>Family Apartment</strong></h5>
+									<h6 class="text-muted"><i class="fas fa-map-marker-alt mr-2"></i>Dhanmondi, Dhaka</h6>
+								</div>
+								<div class="card-footer " style="background-color: #ffffff;">
+									<span class="mr-2 text-muted"><i class="fas fa-bed mr-2"></i>3 Bedrooms</span>
+									<span class="mx-2 text-muted"><i class="fas fa-bath mr-2"></i>2 Bathrooms</span>
+									<div class="row pt-3">
+										<div class="col-6">
+											<h5><strong>&#36;200</strong></h5>
+										</div>
+										<div class="col-6 d-flex justify-content-end">
+											<span class="text-muted"><i class="fas fa-share-alt mr-3"></i><i class="far fa-star"></i></span>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="card">
+								<img src="apartment-two.png" class="img-fluid card-img-top rounded">
+								<div class="card-body">
+									<h5 class="card-title"><strong>Family Apartment</strong></h5>
+									<h6 class="text-muted"><i class="fas fa-map-marker-alt mr-2"></i>Dhanmondi, Dhaka</h6>
+								</div>
+								<div class="card-footer " style="background-color: #ffffff;">
+									<span class="mr-2 text-muted"><i class="fas fa-bed mr-2"></i>3 Bedrooms</span>
+									<span class="mx-2 text-muted"><i class="fas fa-bath mr-2"></i>2 Bathrooms</span>
+									<div class="row pt-3">
+										<div class="col-6">
+											<h5><strong>&#36;200</strong></h5>
+										</div>
+										<div class="col-6 d-flex justify-content-end">
+											<span class="text-muted"><i class="fas fa-share-alt mr-3"></i><i class="far fa-star"></i></span>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="card">
+								<img src="apartment-three.png" class="img-fluid card-img-top rounded">
+								<div class="card-body">
+									<h5 class="card-title"><strong>Family Apartment</strong></h5>
+									<h6 class="text-muted"><i class="fas fa-map-marker-alt mr-2"></i>Dhanmondi, Dhaka</h6>
+								</div>
+								<div class="card-footer " style="background-color: #ffffff;">
+									<span class="mr-2 text-muted"><i class="fas fa-bed mr-2"></i>3 Bedrooms</span>
+									<span class="mx-2 text-muted"><i class="fas fa-bath mr-2"></i>2 Bathrooms</span>
+									<div class="row pt-3">
+										<div class="col-6">
+											<h5><strong>&#36;200</strong></h5>
+										</div>
+										<div class="col-6 d-flex justify-content-end">
+											<span class="text-muted"><i class="fas fa-share-alt mr-3"></i><i class="far fa-star"></i></span>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>						
+						<div class="text-center">
+							<button class="btn chkAvail px-4 py-2 my-3"><h5 class="m-0">All Apartments</h5></button>
+						</div>
+					</div>
+
+					<div class="tab-pane fade" id="pills-date1" role="tabpanel" aria-labelledby="pills-date1-tab">
+						<div class="tab-pane fade show active" id="pills-popular" role="tabpanel" aria-labelledby="pills-popular-tab">
+							<div class="card-deck my-4">
+								<div class="card">
+									<img src="apartment-one.png" class="img-fluid card-img-top rounded">
+									<div class="card-body">
+										<h5 class="card-title"><strong>Family Apartment</strong></h5>
+										<h6 class="text-muted"><i class="fas fa-map-marker-alt mr-2"></i>Dhanmondi, Dhaka</h6>
+									</div>
+									<div class="card-footer " style="background-color: #ffffff;">
+										<span class="mr-2 text-muted"><i class="fas fa-bed mr-2"></i>3 Bedrooms</span>
+										<span class="mx-2 text-muted"><i class="fas fa-bath mr-2"></i>2 Bathrooms</span>
+										<div class="row pt-3">
+											<div class="col-6">
+												<h5><strong>&#36;200</strong></h5>
+											</div>
+											<div class="col-6 d-flex justify-content-end">
+												<span class="text-muted"><i class="fas fa-share-alt mr-3"></i><i class="far fa-star"></i></span>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="card">
+									<img src="apartment-two.png" class="img-fluid card-img-top rounded">
+									<div class="card-body">
+										<h5 class="card-title"><strong>Family Apartment</strong></h5>
+										<h6 class="text-muted"><i class="fas fa-map-marker-alt mr-2"></i>Dhanmondi, Dhaka</h6>
+									</div>
+									<div class="card-footer " style="background-color: #ffffff;">
+										<span class="mr-2 text-muted"><i class="fas fa-bed mr-2"></i>3 Bedrooms</span>
+										<span class="mx-2 text-muted"><i class="fas fa-bath mr-2"></i>2 Bathrooms</span>
+										<div class="row pt-3">
+											<div class="col-6">
+												<h5><strong>&#36;200</strong></h5>
+											</div>
+											<div class="col-6 d-flex justify-content-end">
+												<span class="text-muted"><i class="fas fa-share-alt mr-3"></i><i class="far fa-star"></i></span>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="card">
+									<img src="apartment-three.png" class="img-fluid card-img-top rounded">
+									<div class="card-body">
+										<h5 class="card-title"><strong>Family Apartment</strong></h5>
+										<h6 class="text-muted"><i class="fas fa-map-marker-alt mr-2"></i>Dhanmondi, Dhaka</h6>
+									</div>
+									<div class="card-footer " style="background-color: #ffffff;">
+										<span class="mr-2 text-muted"><i class="fas fa-bed mr-2"></i>3 Bedrooms</span>
+										<span class="mx-2 text-muted"><i class="fas fa-bath mr-2"></i>2 Bathrooms</span>
+										<div class="row pt-3">
+											<div class="col-6">
+												<h5><strong>&#36;200</strong></h5>
+											</div>
+											<div class="col-6 d-flex justify-content-end">
+												<span class="text-muted"><i class="fas fa-share-alt mr-3"></i><i class="far fa-star"></i></span>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="card-deck my-4">
+								<div class="card">
+									<img src="apartment-four.png" class="img-fluid card-img-top rounded">
+									<div class="card-body">
+										<h5 class="card-title"><strong>Family Apartment</strong></h5>
+										<h6 class="text-muted"><i class="fas fa-map-marker-alt mr-2"></i>Dhanmondi, Dhaka</h6>
+									</div>
+									<div class="card-footer " style="background-color: #ffffff;">
+										<span class="mr-2 text-muted"><i class="fas fa-bed mr-2"></i>3 Bedrooms</span>
+										<span class="mx-2 text-muted"><i class="fas fa-bath mr-2"></i>2 Bathrooms</span>
+										<div class="row pt-3">
+											<div class="col-6">
+												<h5><strong>&#36;200</strong></h5>
+											</div>
+											<div class="col-6 d-flex justify-content-end">
+												<span class="text-muted"><i class="fas fa-share-alt mr-3"></i><i class="far fa-star"></i></span>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="card">
+									<img src="apartment-five.png" class="img-fluid card-img-top rounded">
+									<div class="card-body">
+										<h5 class="card-title"><strong>Family Apartment</strong></h5>
+										<h6 class="text-muted"><i class="fas fa-map-marker-alt mr-2"></i>Dhanmondi, Dhaka</h6>
+									</div>
+									<div class="card-footer " style="background-color: #ffffff;">
+										<span class="mr-2 text-muted"><i class="fas fa-bed mr-2"></i>3 Bedrooms</span>
+										<span class="mx-2 text-muted"><i class="fas fa-bath mr-2"></i>2 Bathrooms</span>
+										<div class="row pt-3">
+											<div class="col-6">
+												<h5><strong>&#36;200</strong></h5>
+											</div>
+											<div class="col-6 d-flex justify-content-end">
+												<span class="text-muted"><i class="fas fa-share-alt mr-3"></i><i class="far fa-star"></i></span>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="card">
+									<img src="apartment-six.png" class="img-fluid card-img-top rounded">
+									<div class="card-body">
+										<h5 class="card-title"><strong>Family Apartment</strong></h5>
+										<h6 class="text-muted"><i class="fas fa-map-marker-alt mr-2"></i>Dhanmondi, Dhaka</h6>
+									</div>
+									<div class="card-footer " style="background-color: #ffffff;">
+										<span class="mr-2 text-muted"><i class="fas fa-bed mr-2"></i>3 Bedrooms</span>
+										<span class="mx-2 text-muted"><i class="fas fa-bath mr-2"></i>2 Bathrooms</span>
+										<div class="row pt-3">
+											<div class="col-6">
+												<h5><strong>&#36;200</strong></h5>
+											</div>
+											<div class="col-6 d-flex justify-content-end">
+												<span class="text-muted"><i class="fas fa-share-alt mr-3"></i><i class="far fa-star"></i></span>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="card-deck my-4">
+								<div class="card">
+									<img src="apartment-one.png" class="img-fluid card-img-top rounded">
+									<div class="card-body">
+										<h5 class="card-title"><strong>Family Apartment</strong></h5>
+										<h6 class="text-muted"><i class="fas fa-map-marker-alt mr-2"></i>Dhanmondi, Dhaka</h6>
+									</div>
+									<div class="card-footer " style="background-color: #ffffff;">
+										<span class="mr-2 text-muted"><i class="fas fa-bed mr-2"></i>3 Bedrooms</span>
+										<span class="mx-2 text-muted"><i class="fas fa-bath mr-2"></i>2 Bathrooms</span>
+										<div class="row pt-3">
+											<div class="col-6">
+												<h5><strong>&#36;200</strong></h5>
+											</div>
+											<div class="col-6 d-flex justify-content-end">
+												<span class="text-muted"><i class="fas fa-share-alt mr-3"></i><i class="far fa-star"></i></span>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="card">
+									<img src="apartment-two.png" class="img-fluid card-img-top rounded">
+									<div class="card-body">
+										<h5 class="card-title"><strong>Family Apartment</strong></h5>
+										<h6 class="text-muted"><i class="fas fa-map-marker-alt mr-2"></i>Dhanmondi, Dhaka</h6>
+									</div>
+									<div class="card-footer " style="background-color: #ffffff;">
+										<span class="mr-2 text-muted"><i class="fas fa-bed mr-2"></i>3 Bedrooms</span>
+										<span class="mx-2 text-muted"><i class="fas fa-bath mr-2"></i>2 Bathrooms</span>
+										<div class="row pt-3">
+											<div class="col-6">
+												<h5><strong>&#36;200</strong></h5>
+											</div>
+											<div class="col-6 d-flex justify-content-end">
+												<span class="text-muted"><i class="fas fa-share-alt mr-3"></i><i class="far fa-star"></i></span>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="card">
+									<img src="apartment-three.png" class="img-fluid card-img-top rounded">
+									<div class="card-body">
+										<h5 class="card-title"><strong>Family Apartment</strong></h5>
+										<h6 class="text-muted"><i class="fas fa-map-marker-alt mr-2"></i>Dhanmondi, Dhaka</h6>
+									</div>
+									<div class="card-footer " style="background-color: #ffffff;">
+										<span class="mr-2 text-muted"><i class="fas fa-bed mr-2"></i>3 Bedrooms</span>
+										<span class="mx-2 text-muted"><i class="fas fa-bath mr-2"></i>2 Bathrooms</span>
+										<div class="row pt-3">
+											<div class="col-6">
+												<h5><strong>&#36;200</strong></h5>
+											</div>
+											<div class="col-6 d-flex justify-content-end">
+												<span class="text-muted"><i class="fas fa-share-alt mr-3"></i><i class="far fa-star"></i></span>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>						
+							<div class="text-center">
+								<button class="btn chkAvail px-4 py-2 my-3"><h5 class="m-0">All Apartments</h5></button>
+							</div>
+						</div>
+					</div>
+
+					<div class="tab-pane fade" id="pills-date2" role="tabpanel" aria-labelledby="pills-date2-tab">
+						<div class="card-deck my-4">
+							<div class="card">
+								<img src="apartment-one.png" class="img-fluid card-img-top rounded">
+								<div class="card-body">
+									<h5 class="card-title"><strong>Family Apartment</strong></h5>
+									<h6 class="text-muted"><i class="fas fa-map-marker-alt mr-2"></i>Dhanmondi, Dhaka</h6>
+								</div>
+								<div class="card-footer " style="background-color: #ffffff;">
+									<span class="mr-2 text-muted"><i class="fas fa-bed mr-2"></i>3 Bedrooms</span>
+									<span class="mx-2 text-muted"><i class="fas fa-bath mr-2"></i>2 Bathrooms</span>
+									<div class="row pt-3">
+										<div class="col-6">
+											<h5><strong>&#36;200</strong></h5>
+										</div>
+										<div class="col-6 d-flex justify-content-end">
+											<span class="text-muted"><i class="fas fa-share-alt mr-3"></i><i class="far fa-star"></i></span>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="card">
+								<img src="apartment-two.png" class="img-fluid card-img-top rounded">
+								<div class="card-body">
+									<h5 class="card-title"><strong>Family Apartment</strong></h5>
+									<h6 class="text-muted"><i class="fas fa-map-marker-alt mr-2"></i>Dhanmondi, Dhaka</h6>
+								</div>
+								<div class="card-footer " style="background-color: #ffffff;">
+									<span class="mr-2 text-muted"><i class="fas fa-bed mr-2"></i>3 Bedrooms</span>
+									<span class="mx-2 text-muted"><i class="fas fa-bath mr-2"></i>2 Bathrooms</span>
+									<div class="row pt-3">
+										<div class="col-6">
+											<h5><strong>&#36;200</strong></h5>
+										</div>
+										<div class="col-6 d-flex justify-content-end">
+											<span class="text-muted"><i class="fas fa-share-alt mr-3"></i><i class="far fa-star"></i></span>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="card">
+								<img src="apartment-three.png" class="img-fluid card-img-top rounded">
+								<div class="card-body">
+									<h5 class="card-title"><strong>Family Apartment</strong></h5>
+									<h6 class="text-muted"><i class="fas fa-map-marker-alt mr-2"></i>Dhanmondi, Dhaka</h6>
+								</div>
+								<div class="card-footer " style="background-color: #ffffff;">
+									<span class="mr-2 text-muted"><i class="fas fa-bed mr-2"></i>3 Bedrooms</span>
+									<span class="mx-2 text-muted"><i class="fas fa-bath mr-2"></i>2 Bathrooms</span>
+									<div class="row pt-3">
+										<div class="col-6">
+											<h5><strong>&#36;200</strong></h5>
+										</div>
+										<div class="col-6 d-flex justify-content-end">
+											<span class="text-muted"><i class="fas fa-share-alt mr-3"></i><i class="far fa-star"></i></span>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="card-deck my-4">
+							<div class="card">
+								<img src="apartment-four.png" class="img-fluid card-img-top rounded">
+								<div class="card-body">
+									<h5 class="card-title"><strong>Family Apartment</strong></h5>
+									<h6 class="text-muted"><i class="fas fa-map-marker-alt mr-2"></i>Dhanmondi, Dhaka</h6>
+								</div>
+								<div class="card-footer " style="background-color: #ffffff;">
+									<span class="mr-2 text-muted"><i class="fas fa-bed mr-2"></i>3 Bedrooms</span>
+									<span class="mx-2 text-muted"><i class="fas fa-bath mr-2"></i>2 Bathrooms</span>
+									<div class="row pt-3">
+										<div class="col-6">
+											<h5><strong>&#36;200</strong></h5>
+										</div>
+										<div class="col-6 d-flex justify-content-end">
+											<span class="text-muted"><i class="fas fa-share-alt mr-3"></i><i class="far fa-star"></i></span>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="card">
+								<img src="apartment-five.png" class="img-fluid card-img-top rounded">
+								<div class="card-body">
+									<h5 class="card-title"><strong>Family Apartment</strong></h5>
+									<h6 class="text-muted"><i class="fas fa-map-marker-alt mr-2"></i>Dhanmondi, Dhaka</h6>
+								</div>
+								<div class="card-footer " style="background-color: #ffffff;">
+									<span class="mr-2 text-muted"><i class="fas fa-bed mr-2"></i>3 Bedrooms</span>
+									<span class="mx-2 text-muted"><i class="fas fa-bath mr-2"></i>2 Bathrooms</span>
+									<div class="row pt-3">
+										<div class="col-6">
+											<h5><strong>&#36;200</strong></h5>
+										</div>
+										<div class="col-6 d-flex justify-content-end">
+											<span class="text-muted"><i class="fas fa-share-alt mr-3"></i><i class="far fa-star"></i></span>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="card">
+								<img src="apartment-six.png" class="img-fluid card-img-top rounded">
+								<div class="card-body">
+									<h5 class="card-title"><strong>Family Apartment</strong></h5>
+									<h6 class="text-muted"><i class="fas fa-map-marker-alt mr-2"></i>Dhanmondi, Dhaka</h6>
+								</div>
+								<div class="card-footer " style="background-color: #ffffff;">
+									<span class="mr-2 text-muted"><i class="fas fa-bed mr-2"></i>3 Bedrooms</span>
+									<span class="mx-2 text-muted"><i class="fas fa-bath mr-2"></i>2 Bathrooms</span>
+									<div class="row pt-3">
+										<div class="col-6">
+											<h5><strong>&#36;200</strong></h5>
+										</div>
+										<div class="col-6 d-flex justify-content-end">
+											<span class="text-muted"><i class="fas fa-share-alt mr-3"></i><i class="far fa-star"></i></span>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="card-deck my-4">
+							<div class="card">
+								<img src="apartment-one.png" class="img-fluid card-img-top rounded">
+								<div class="card-body">
+									<h5 class="card-title"><strong>Family Apartment</strong></h5>
+									<h6 class="text-muted"><i class="fas fa-map-marker-alt mr-2"></i>Dhanmondi, Dhaka</h6>
+								</div>
+								<div class="card-footer " style="background-color: #ffffff;">
+									<span class="mr-2 text-muted"><i class="fas fa-bed mr-2"></i>3 Bedrooms</span>
+									<span class="mx-2 text-muted"><i class="fas fa-bath mr-2"></i>2 Bathrooms</span>
+									<div class="row pt-3">
+										<div class="col-6">
+											<h5><strong>&#36;200</strong></h5>
+										</div>
+										<div class="col-6 d-flex justify-content-end">
+											<span class="text-muted"><i class="fas fa-share-alt mr-3"></i><i class="far fa-star"></i></span>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="card">
+								<img src="apartment-two.png" class="img-fluid card-img-top rounded">
+								<div class="card-body">
+									<h5 class="card-title"><strong>Family Apartment</strong></h5>
+									<h6 class="text-muted"><i class="fas fa-map-marker-alt mr-2"></i>Dhanmondi, Dhaka</h6>
+								</div>
+								<div class="card-footer " style="background-color: #ffffff;">
+									<span class="mr-2 text-muted"><i class="fas fa-bed mr-2"></i>3 Bedrooms</span>
+									<span class="mx-2 text-muted"><i class="fas fa-bath mr-2"></i>2 Bathrooms</span>
+									<div class="row pt-3">
+										<div class="col-6">
+											<h5><strong>&#36;200</strong></h5>
+										</div>
+										<div class="col-6 d-flex justify-content-end">
+											<span class="text-muted"><i class="fas fa-share-alt mr-3"></i><i class="far fa-star"></i></span>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="card">
+								<img src="apartment-three.png" class="img-fluid card-img-top rounded">
+								<div class="card-body">
+									<h5 class="card-title"><strong>Family Apartment</strong></h5>
+									<h6 class="text-muted"><i class="fas fa-map-marker-alt mr-2"></i>Dhanmondi, Dhaka</h6>
+								</div>
+								<div class="card-footer " style="background-color: #ffffff;">
+									<span class="mr-2 text-muted"><i class="fas fa-bed mr-2"></i>3 Bedrooms</span>
+									<span class="mx-2 text-muted"><i class="fas fa-bath mr-2"></i>2 Bathrooms</span>
+									<div class="row pt-3">
+										<div class="col-6">
+											<h5><strong>&#36;200</strong></h5>
+										</div>
+										<div class="col-6 d-flex justify-content-end">
+											<span class="text-muted"><i class="fas fa-share-alt mr-3"></i><i class="far fa-star"></i></span>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>						
+						<div class="text-center">
+							<button class="btn chkAvail px-4 py-2 my-3"><h5 class="m-0">All Apartments</h5></button>
+						</div>
+					</div>
+
+					<div class="tab-pane fade" id="pills-price1" role="tabpanel" aria-labelledby="pills-price1-tab">
+						<div class="card-deck my-4">
+							<div class="card">
+								<img src="apartment-one.png" class="img-fluid card-img-top rounded">
+								<div class="card-body">
+									<h5 class="card-title"><strong>Family Apartment</strong></h5>
+									<h6 class="text-muted"><i class="fas fa-map-marker-alt mr-2"></i>Dhanmondi, Dhaka</h6>
+								</div>
+								<div class="card-footer " style="background-color: #ffffff;">
+									<span class="mr-2 text-muted"><i class="fas fa-bed mr-2"></i>3 Bedrooms</span>
+									<span class="mx-2 text-muted"><i class="fas fa-bath mr-2"></i>2 Bathrooms</span>
+									<div class="row pt-3">
+										<div class="col-6">
+											<h5><strong>&#36;200</strong></h5>
+										</div>
+										<div class="col-6 d-flex justify-content-end">
+											<span class="text-muted"><i class="fas fa-share-alt mr-3"></i><i class="far fa-star"></i></span>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="card">
+								<img src="apartment-two.png" class="img-fluid card-img-top rounded">
+								<div class="card-body">
+									<h5 class="card-title"><strong>Family Apartment</strong></h5>
+									<h6 class="text-muted"><i class="fas fa-map-marker-alt mr-2"></i>Dhanmondi, Dhaka</h6>
+								</div>
+								<div class="card-footer " style="background-color: #ffffff;">
+									<span class="mr-2 text-muted"><i class="fas fa-bed mr-2"></i>3 Bedrooms</span>
+									<span class="mx-2 text-muted"><i class="fas fa-bath mr-2"></i>2 Bathrooms</span>
+									<div class="row pt-3">
+										<div class="col-6">
+											<h5><strong>&#36;200</strong></h5>
+										</div>
+										<div class="col-6 d-flex justify-content-end">
+											<span class="text-muted"><i class="fas fa-share-alt mr-3"></i><i class="far fa-star"></i></span>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="card">
+								<img src="apartment-three.png" class="img-fluid card-img-top rounded">
+								<div class="card-body">
+									<h5 class="card-title"><strong>Family Apartment</strong></h5>
+									<h6 class="text-muted"><i class="fas fa-map-marker-alt mr-2"></i>Dhanmondi, Dhaka</h6>
+								</div>
+								<div class="card-footer " style="background-color: #ffffff;">
+									<span class="mr-2 text-muted"><i class="fas fa-bed mr-2"></i>3 Bedrooms</span>
+									<span class="mx-2 text-muted"><i class="fas fa-bath mr-2"></i>2 Bathrooms</span>
+									<div class="row pt-3">
+										<div class="col-6">
+											<h5><strong>&#36;200</strong></h5>
+										</div>
+										<div class="col-6 d-flex justify-content-end">
+											<span class="text-muted"><i class="fas fa-share-alt mr-3"></i><i class="far fa-star"></i></span>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="card-deck my-4">
+							<div class="card">
+								<img src="apartment-four.png" class="img-fluid card-img-top rounded">
+								<div class="card-body">
+									<h5 class="card-title"><strong>Family Apartment</strong></h5>
+									<h6 class="text-muted"><i class="fas fa-map-marker-alt mr-2"></i>Dhanmondi, Dhaka</h6>
+								</div>
+								<div class="card-footer " style="background-color: #ffffff;">
+									<span class="mr-2 text-muted"><i class="fas fa-bed mr-2"></i>3 Bedrooms</span>
+									<span class="mx-2 text-muted"><i class="fas fa-bath mr-2"></i>2 Bathrooms</span>
+									<div class="row pt-3">
+										<div class="col-6">
+											<h5><strong>&#36;200</strong></h5>
+										</div>
+										<div class="col-6 d-flex justify-content-end">
+											<span class="text-muted"><i class="fas fa-share-alt mr-3"></i><i class="far fa-star"></i></span>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="card">
+								<img src="apartment-five.png" class="img-fluid card-img-top rounded">
+								<div class="card-body">
+									<h5 class="card-title"><strong>Family Apartment</strong></h5>
+									<h6 class="text-muted"><i class="fas fa-map-marker-alt mr-2"></i>Dhanmondi, Dhaka</h6>
+								</div>
+								<div class="card-footer " style="background-color: #ffffff;">
+									<span class="mr-2 text-muted"><i class="fas fa-bed mr-2"></i>3 Bedrooms</span>
+									<span class="mx-2 text-muted"><i class="fas fa-bath mr-2"></i>2 Bathrooms</span>
+									<div class="row pt-3">
+										<div class="col-6">
+											<h5><strong>&#36;200</strong></h5>
+										</div>
+										<div class="col-6 d-flex justify-content-end">
+											<span class="text-muted"><i class="fas fa-share-alt mr-3"></i><i class="far fa-star"></i></span>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="card">
+								<img src="apartment-six.png" class="img-fluid card-img-top rounded">
+								<div class="card-body">
+									<h5 class="card-title"><strong>Family Apartment</strong></h5>
+									<h6 class="text-muted"><i class="fas fa-map-marker-alt mr-2"></i>Dhanmondi, Dhaka</h6>
+								</div>
+								<div class="card-footer " style="background-color: #ffffff;">
+									<span class="mr-2 text-muted"><i class="fas fa-bed mr-2"></i>3 Bedrooms</span>
+									<span class="mx-2 text-muted"><i class="fas fa-bath mr-2"></i>2 Bathrooms</span>
+									<div class="row pt-3">
+										<div class="col-6">
+											<h5><strong>&#36;200</strong></h5>
+										</div>
+										<div class="col-6 d-flex justify-content-end">
+											<span class="text-muted"><i class="fas fa-share-alt mr-3"></i><i class="far fa-star"></i></span>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="card-deck my-4">
+							<div class="card">
+								<img src="apartment-one.png" class="img-fluid card-img-top rounded">
+								<div class="card-body">
+									<h5 class="card-title"><strong>Family Apartment</strong></h5>
+									<h6 class="text-muted"><i class="fas fa-map-marker-alt mr-2"></i>Dhanmondi, Dhaka</h6>
+								</div>
+								<div class="card-footer " style="background-color: #ffffff;">
+									<span class="mr-2 text-muted"><i class="fas fa-bed mr-2"></i>3 Bedrooms</span>
+									<span class="mx-2 text-muted"><i class="fas fa-bath mr-2"></i>2 Bathrooms</span>
+									<div class="row pt-3">
+										<div class="col-6">
+											<h5><strong>&#36;200</strong></h5>
+										</div>
+										<div class="col-6 d-flex justify-content-end">
+											<span class="text-muted"><i class="fas fa-share-alt mr-3"></i><i class="far fa-star"></i></span>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="card">
+								<img src="apartment-two.png" class="img-fluid card-img-top rounded">
+								<div class="card-body">
+									<h5 class="card-title"><strong>Family Apartment</strong></h5>
+									<h6 class="text-muted"><i class="fas fa-map-marker-alt mr-2"></i>Dhanmondi, Dhaka</h6>
+								</div>
+								<div class="card-footer " style="background-color: #ffffff;">
+									<span class="mr-2 text-muted"><i class="fas fa-bed mr-2"></i>3 Bedrooms</span>
+									<span class="mx-2 text-muted"><i class="fas fa-bath mr-2"></i>2 Bathrooms</span>
+									<div class="row pt-3">
+										<div class="col-6">
+											<h5><strong>&#36;200</strong></h5>
+										</div>
+										<div class="col-6 d-flex justify-content-end">
+											<span class="text-muted"><i class="fas fa-share-alt mr-3"></i><i class="far fa-star"></i></span>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="card">
+								<img src="apartment-three.png" class="img-fluid card-img-top rounded">
+								<div class="card-body">
+									<h5 class="card-title"><strong>Family Apartment</strong></h5>
+									<h6 class="text-muted"><i class="fas fa-map-marker-alt mr-2"></i>Dhanmondi, Dhaka</h6>
+								</div>
+								<div class="card-footer " style="background-color: #ffffff;">
+									<span class="mr-2 text-muted"><i class="fas fa-bed mr-2"></i>3 Bedrooms</span>
+									<span class="mx-2 text-muted"><i class="fas fa-bath mr-2"></i>2 Bathrooms</span>
+									<div class="row pt-3">
+										<div class="col-6">
+											<h5><strong>&#36;200</strong></h5>
+										</div>
+										<div class="col-6 d-flex justify-content-end">
+											<span class="text-muted"><i class="fas fa-share-alt mr-3"></i><i class="far fa-star"></i></span>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>						
+						<div class="text-center">
+							<button class="btn chkAvail px-4 py-2 my-3"><h5 class="m-0">All Apartments</h5></button>
+						</div>
+					</div>
+
+					<div class="tab-pane fade" id="pills-price2" role="tabpanel" aria-labelledby="pills-price2-tab">
+						<div class="card-deck my-4">
+							<div class="card">
+								<img src="apartment-one.png" class="img-fluid card-img-top rounded">
+								<div class="card-body">
+									<h5 class="card-title"><strong>Family Apartment</strong></h5>
+									<h6 class="text-muted"><i class="fas fa-map-marker-alt mr-2"></i>Dhanmondi, Dhaka</h6>
+								</div>
+								<div class="card-footer " style="background-color: #ffffff;">
+									<span class="mr-2 text-muted"><i class="fas fa-bed mr-2"></i>3 Bedrooms</span>
+									<span class="mx-2 text-muted"><i class="fas fa-bath mr-2"></i>2 Bathrooms</span>
+									<div class="row pt-3">
+										<div class="col-6">
+											<h5><strong>&#36;200</strong></h5>
+										</div>
+										<div class="col-6 d-flex justify-content-end">
+											<span class="text-muted"><i class="fas fa-share-alt mr-3"></i><i class="far fa-star"></i></span>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="card">
+								<img src="apartment-two.png" class="img-fluid card-img-top rounded">
+								<div class="card-body">
+									<h5 class="card-title"><strong>Family Apartment</strong></h5>
+									<h6 class="text-muted"><i class="fas fa-map-marker-alt mr-2"></i>Dhanmondi, Dhaka</h6>
+								</div>
+								<div class="card-footer " style="background-color: #ffffff;">
+									<span class="mr-2 text-muted"><i class="fas fa-bed mr-2"></i>3 Bedrooms</span>
+									<span class="mx-2 text-muted"><i class="fas fa-bath mr-2"></i>2 Bathrooms</span>
+									<div class="row pt-3">
+										<div class="col-6">
+											<h5><strong>&#36;200</strong></h5>
+										</div>
+										<div class="col-6 d-flex justify-content-end">
+											<span class="text-muted"><i class="fas fa-share-alt mr-3"></i><i class="far fa-star"></i></span>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="card">
+								<img src="apartment-three.png" class="img-fluid card-img-top rounded">
+								<div class="card-body">
+									<h5 class="card-title"><strong>Family Apartment</strong></h5>
+									<h6 class="text-muted"><i class="fas fa-map-marker-alt mr-2"></i>Dhanmondi, Dhaka</h6>
+								</div>
+								<div class="card-footer " style="background-color: #ffffff;">
+									<span class="mr-2 text-muted"><i class="fas fa-bed mr-2"></i>3 Bedrooms</span>
+									<span class="mx-2 text-muted"><i class="fas fa-bath mr-2"></i>2 Bathrooms</span>
+									<div class="row pt-3">
+										<div class="col-6">
+											<h5><strong>&#36;200</strong></h5>
+										</div>
+										<div class="col-6 d-flex justify-content-end">
+											<span class="text-muted"><i class="fas fa-share-alt mr-3"></i><i class="far fa-star"></i></span>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="card-deck my-4">
+							<div class="card">
+								<img src="apartment-four.png" class="img-fluid card-img-top rounded">
+								<div class="card-body">
+									<h5 class="card-title"><strong>Family Apartment</strong></h5>
+									<h6 class="text-muted"><i class="fas fa-map-marker-alt mr-2"></i>Dhanmondi, Dhaka</h6>
+								</div>
+								<div class="card-footer " style="background-color: #ffffff;">
+									<span class="mr-2 text-muted"><i class="fas fa-bed mr-2"></i>3 Bedrooms</span>
+									<span class="mx-2 text-muted"><i class="fas fa-bath mr-2"></i>2 Bathrooms</span>
+									<div class="row pt-3">
+										<div class="col-6">
+											<h5><strong>&#36;200</strong></h5>
+										</div>
+										<div class="col-6 d-flex justify-content-end">
+											<span class="text-muted"><i class="fas fa-share-alt mr-3"></i><i class="far fa-star"></i></span>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="card">
+								<img src="apartment-five.png" class="img-fluid card-img-top rounded">
+								<div class="card-body">
+									<h5 class="card-title"><strong>Family Apartment</strong></h5>
+									<h6 class="text-muted"><i class="fas fa-map-marker-alt mr-2"></i>Dhanmondi, Dhaka</h6>
+								</div>
+								<div class="card-footer " style="background-color: #ffffff;">
+									<span class="mr-2 text-muted"><i class="fas fa-bed mr-2"></i>3 Bedrooms</span>
+									<span class="mx-2 text-muted"><i class="fas fa-bath mr-2"></i>2 Bathrooms</span>
+									<div class="row pt-3">
+										<div class="col-6">
+											<h5><strong>&#36;200</strong></h5>
+										</div>
+										<div class="col-6 d-flex justify-content-end">
+											<span class="text-muted"><i class="fas fa-share-alt mr-3"></i><i class="far fa-star"></i></span>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="card">
+								<img src="apartment-six.png" class="img-fluid card-img-top rounded">
+								<div class="card-body">
+									<h5 class="card-title"><strong>Family Apartment</strong></h5>
+									<h6 class="text-muted"><i class="fas fa-map-marker-alt mr-2"></i>Dhanmondi, Dhaka</h6>
+								</div>
+								<div class="card-footer " style="background-color: #ffffff;">
+									<span class="mr-2 text-muted"><i class="fas fa-bed mr-2"></i>3 Bedrooms</span>
+									<span class="mx-2 text-muted"><i class="fas fa-bath mr-2"></i>2 Bathrooms</span>
+									<div class="row pt-3">
+										<div class="col-6">
+											<h5><strong>&#36;200</strong></h5>
+										</div>
+										<div class="col-6 d-flex justify-content-end">
+											<span class="text-muted"><i class="fas fa-share-alt mr-3"></i><i class="far fa-star"></i></span>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="card-deck my-4">
+							<div class="card">
+								<img src="apartment-one.png" class="img-fluid card-img-top rounded">
+								<div class="card-body">
+									<h5 class="card-title"><strong>Family Apartment</strong></h5>
+									<h6 class="text-muted"><i class="fas fa-map-marker-alt mr-2"></i>Dhanmondi, Dhaka</h6>
+								</div>
+								<div class="card-footer " style="background-color: #ffffff;">
+									<span class="mr-2 text-muted"><i class="fas fa-bed mr-2"></i>3 Bedrooms</span>
+									<span class="mx-2 text-muted"><i class="fas fa-bath mr-2"></i>2 Bathrooms</span>
+									<div class="row pt-3">
+										<div class="col-6">
+											<h5><strong>&#36;200</strong></h5>
+										</div>
+										<div class="col-6 d-flex justify-content-end">
+											<span class="text-muted"><i class="fas fa-share-alt mr-3"></i><i class="far fa-star"></i></span>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="card">
+								<img src="apartment-two.png" class="img-fluid card-img-top rounded">
+								<div class="card-body">
+									<h5 class="card-title"><strong>Family Apartment</strong></h5>
+									<h6 class="text-muted"><i class="fas fa-map-marker-alt mr-2"></i>Dhanmondi, Dhaka</h6>
+								</div>
+								<div class="card-footer " style="background-color: #ffffff;">
+									<span class="mr-2 text-muted"><i class="fas fa-bed mr-2"></i>3 Bedrooms</span>
+									<span class="mx-2 text-muted"><i class="fas fa-bath mr-2"></i>2 Bathrooms</span>
+									<div class="row pt-3">
+										<div class="col-6">
+											<h5><strong>&#36;200</strong></h5>
+										</div>
+										<div class="col-6 d-flex justify-content-end">
+											<span class="text-muted"><i class="fas fa-share-alt mr-3"></i><i class="far fa-star"></i></span>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="card">
+								<img src="apartment-three.png" class="img-fluid card-img-top rounded">
+								<div class="card-body">
+									<h5 class="card-title"><strong>Family Apartment</strong></h5>
+									<h6 class="text-muted"><i class="fas fa-map-marker-alt mr-2"></i>Dhanmondi, Dhaka</h6>
+								</div>
+								<div class="card-footer " style="background-color: #ffffff;">
+									<span class="mr-2 text-muted"><i class="fas fa-bed mr-2"></i>3 Bedrooms</span>
+									<span class="mx-2 text-muted"><i class="fas fa-bath mr-2"></i>2 Bathrooms</span>
+									<div class="row pt-3">
+										<div class="col-6">
+											<h5><strong>&#36;200</strong></h5>
+										</div>
+										<div class="col-6 d-flex justify-content-end">
+											<span class="text-muted"><i class="fas fa-share-alt mr-3"></i><i class="far fa-star"></i></span>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>						
+						<div class="text-center">
+							<button class="btn chkAvail px-4 py-2 my-3"><h5 class="m-0">All Apartments</h5></button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript">
+			function categoryDropdown() {
+			    document.getElementById("catgyDrop").classList.toggle("show");
+			}
+
+			// Close the dropdown menu if the user clicks outside of it
+			window.onclick = function(event) {
+			  if (!event.target.matches('.catgybtn')) {
+
+			    var dropdowns = document.getElementsByClassName("dropdown-category");
+			    var i;
+			    for (i = 0; i < dropdowns.length; i++) {
+			      var openDropdown = dropdowns[i];
+			      if (openDropdown.classList.contains('show')) {
+			        openDropdown.classList.remove('show');
+			      }
+			    }
+			  }
+			}
+		</script>
+	</div>
+
+	<div class="banner10">
+		<div class="main-footer pt-5">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-4 my-5">
+						<h5 class="ftr"><strong>About House Rent</strong></h5>
+						<hr>
+						<img src="footer-logo.png" class="img-fluid">
+						<h6 class="text-muted my-4" style="line-height: 1.5;">We Provide Premium Word Press, Ghost and HTML template. Our Perm tritium Templates is, develop gaped in a way so that the clients find Support. Themes are developed in a way so that the clients find.</h6>
+						<button class="btn ftr-btn px-4 py-2 my-3"><h5 class="m-0">More</h5></button>
+					</div>
+					<div class="col-md-4 my-5">
+						<h5 class="ftr"><strong>Place Category</strong></h5>
+						<hr>
+						<ul>
+							<li class="my-3"><strong>Flat for Rent<span><a href="#">&nbsp;Francis</a></span></strong></li>
+							<li class="my-3"><strong>Flat for Rent<span><a href="#">&nbsp;Collins St</a></span></strong></li>
+							<li class="my-3"><strong>Flat for Rent<span><a href="#">&nbsp;Rose Ln</a></span></strong></li>
+							<li class="my-3"><strong>Flat for Rent<span><a href="#">&nbsp;Cosgrave Ln</a></span></strong></li>
+							<li class="my-3"><strong>Flat for Rent<span><a href="#">&nbsp;Bourke St</a></span></strong></li>
+							<li class="my-3"><strong>Flat for Rent<span><a href="#">&nbsp;Flienders Ln</a></span></strong></li>
+						</ul>
+					</div>
+					<div class="col-md-4 my-5">
+						<h5 class="ftr"><strong>Instagram Images</strong></h5>
+						<hr>
+						<div class="row">
+							<div class="col-md-4 col-6  d-flex justify-content-end">
+								<a href="#">
+									<img src="instagram-one.png" class="img-fluid">
+								</a>
+							</div>
+							<div class="col-md-4 col-6 d-flex justify-content-start">
+								<a href="#">
+									<img src="instagram-two.png" class="img-fluid">
+								</a>
+							</div>
+							<div class="col-md-4 col-6 d-flex justify-content-end">
+								<a href="#">
+									<img src="instagram-three.png" class="img-fluid">
+								</a>
+							</div>
+							<div class="col-md-4 col-6 d-flex justify-content-start">
+								<a href="#">
+									<img src="instagram-four.png" class="img-fluid">
+								</a>
+							</div>
+							<div class="col-md-4 col-6 d-flex justify-content-end">
+								<a href="#">
+									<img src="instagram-five.png" class="img-fluid">
+								</a>
+							</div>
+							<div class="col-md-4 col-6 d-flex justify-content-start">
+								<a href="#">
+									<img src="instagram-six.png" class="img-fluid">
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<hr>
+				<div class="text-center my-4">
+					<h6><strong>Copyright &copy;2017<span>&nbsp;<a href="#" class="ftr">HTMLguru</a></span></strong></h6>
+				</div>
+			</div>	
+		</div>
+	</div>
+
+	<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

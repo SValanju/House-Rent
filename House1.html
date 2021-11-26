@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Single Apartment</title>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="stylesheet" type="text/css" href="house1.css">
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+	<link href="https://fonts.googleapis.com/css2?family=Vidaloka&display=swap" rel="stylesheet">
+
+	<script src="https://kit.fontawesome.com/83772345fd.js" crossorigin="anonymous"></script>
+
+	<link rel="stylesheet" type="text/css" href="lightbox.css">
+	<script type="text/javascript" src="lightbox.js"></script>
+</head>
+<body>
+
+	<div class="navigationBar py-3">
+		<div class="container">
+			<nav>
+				<div class="row m-0 align-items-center">
+					<div class="col-md-2 col-1 pr-0 mob-menu">
+						<a href="#" id="openMobnav">
+							<i class="fas fa-bars"></i>
+						</a>
+					</div>
+					<div class="col-md-4 col-8">
+						<a href="index.html" class="navbar-brand">
+							<img src="logo.png" class="img-fluid">
+						</a>
+					</div>
+					<div class="col-md-6 col-3 d-flex justify-content-end ml-auto p-0">					
+						<div class="ntr">
+							<span class="mobHide">
+								<a href="#">
+									<i class="fas fa-phone-square-alt mr-2"></i><span>CALL US - 01623 030020</span>
+								</a>
+								<a href="" data-toggle="modal" data-target="#logregModal">
+									<i class="fas fa-address-book mr-2"></i><span>LOGIN / REGISTER</span>
+								</a>
+							</span>
+							<a href="#" id="openSearch">
+								<i class="fas fa-search"></i>
+							</a>
+							<a href="#" id="openNav" class="mob-R-menu mobHide">
+								<i class="fas fa-bars"></i>
+							</a>
+							<a href="#" class="mob-R-menu lappyHide">
+								<i class="fas fa-sliders-h"></i>
+							</a>
+						</div>
+					</div>
+					<div class="col-md-8 p-0">
+						<div class="bottomNav py-2" id="MobNAV">
+							<div class="hidecontent d-flex justify-content-between">
+								<span>Menu</span>
+								<a href="javascript:void(0)" id="closeMobnav">&times;</a>
+							</div>
+							
+							<ul>
+								<li><a href="index.html">Home</a></li>
+								<li>
+									<a href="#">House<i class="fas fa-caret-down ml-2"></i></a>
+									<ul>
+										<li><a href="House1.html">Apartment Single</a></li>
+										<li><a href="#">Item 2</a></li>
+										<li><a href="#">Item 3</a></li>
+									</ul>
+								</li>
+								<li>
+									<a href="#">Pages<i class="fas fa-caret-down ml-2"></i></a>
+									<ul>
+										<li><a href="#">Item 1</a></li>
+										<li><a href="#">Item 2</a></li>
+										<li><a href="#">Item 3</a></li>
+									</ul>
+								</li>
+								<li>
+									<a href="#">Blogs<i class="fas fa-caret-down ml-2"></i></a>
+									<ul>
+										<li><a href="#">Item 1</a></li>
+										<li><a href="#">Item 2</a></li>
+										<li><a href="#">Item 3</a></li>
+									</ul>
+								</li>
+								<li><a href="about.html">About</a></li>
+								<li><a href="contact.html">Contact</a></li>
+								<li class="LapHide">
+									<a href="#">
+										<i class="fas fa-phone-square-alt mr-2"></i><span>CALL US - 01623 030020</span>
+									</a>
+								</li>
+								<li class="LapHide">
+									<a href="" data-toggle="modal" data-target="#logregModal">
+										<i class="fas fa-address-book mr-2"></i><span>LOGIN / REGISTER</span>
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-md-4 p-0 d-flex justify-content-end">
+						<a href="booking.html" class="m-0 bking">BOOKING</a>
+					</div>
+				</div>
+			</nav>
+
+			<div class="modal fade" id="logregModal" aria-labelledby="logregModalLabel" aria-hidden="true">
+				<div class="modal-dialog modal-dialog-centered">
+					<div class="modal-content">
+						<div class="modal-body">
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+								<span aria-hidden="true">&times;</span>
+							</button>
+							<ul class="nav nav-tabs row m-0" id="nav-tab" role="tablist">
+								<li class="nav-item col-md-6 col-6 p-0 text-center" role="presentation">
+									<a class="nav-link active" id="login-tab" data-toggle="tab" href="#login" role="tab" aria-controls="login" aria-selected="true"><strong>Sign in</strong></a>
+								</li>
+								<li class="nav-item col-md-6 col-6 p-0 text-center" role="presentation">
+									<a class="nav-link" id="register-tab" data-toggle="tab" href="#register" role="tab" aria-controls="register" aria-selected="false"><strong>Register</strong></a>
+								</li>
+							</ul>
+							<div class="tab-content" id="myTabContent">
+								<div class="tab-pane fade show active" id="login" role="tabpanel" aria-labelledby="login-tab">
+									<form class="my-5">
+										<input type="email" class="form-control my-4 py-4" name="email" placeholder="&#xf0e0   Email" style="font-family: FontAwesome">
+										<input type="password" class="form-control my-4 py-4" name="password" placeholder="&#xf084   Password" style="font-family: FontAwesome">
+										<div class="form-check my-4">
+											<input class="form-check-input" type="checkbox" value="" id="rememberCheck" checked>
+											<label class="form-check-label" for="rememberCheck"><strong>Remember Me</strong></label>
+										</div>
+										<button class="btn btn-block btn-primary">LOGIN</button>
+									</form>
+								</div>
+								<div class="tab-pane fade" id="register" role="tabpanel" aria-labelledby="register-tab">
+									<form class="my-5">
+										<input type="email" class="form-control my-4 py-4" name="email" placeholder="&#xf007   Username" style="font-family: FontAwesome">
+										<input type="email" class="form-control my-4 py-4" name="email" placeholder="&#xf0e0   Email" style="font-family: FontAwesome">
+										<input type="password" class="form-control my-4 py-4" name="password" placeholder="&#xf084   Password" style="font-family: FontAwesome">
+										<div class="form-check my-4">
+											<input class="form-check-input" type="checkbox" value="" id="rememberCheck">
+											<label class="form-check-label" for="rememberCheck"><strong>I agree to the <a href="#" class="t-cModal">Terms & Conditions</a></strong></label>
+										</div>
+										<button class="btn btn-block btn-primary">CREATE ACCOUNT</button>
+									</form>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="mySearchMenu">
+				<div class="overlay" id="mySearch">
+					<a href="javascript:void(0)" class="closebtn" id="closeSearch">&times;</a>
+					<div class="overlay-content">
+						<form class="form-inline my-2 my-lg-0 d-flex justify-content-center">
+							<input class="form-control form-control-lg" type="search" placeholder="Search" aria-label="Search">
+							<button class="btn btn-success btn-lg my-2"><i class="fas fa-search"></i></button>
+						</form>
+					</div>
+				</div>
+			</div>
+
+			<div class="myMenu">
+				<div class="overlay" id="myNav">
+					<a href="javascript:void(0)" class="closebtn" id="closeNav">&times;</a>
+					<div class="overlay-content">
+						<a href="#">Home</a>
+						<div class="dropdown">
+							<a href="javascript:mydropFunction()" class="dropbtn align-items-center">Dropdown<i class="fas fa-caret-down ml-5"></i></a>
+							<div class="dropdown-content" id="myDropdown">
+								<a href="#">Link 1</a>
+								<a href="#">Link 2</a>
+								<a href="#">Link 3</a>
+							</div>
+						</div>
+						<a href="#">Work</a>
+				      	<a href="#">Clients</a>
+				      	<a href="#">Contact</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript">
+			//search icon
+			$('#openSearch').on('click', function(){
+				$('#mySearch').css("width", "100%");
+			});
+
+			$('#closeSearch').on('click', function(){
+				$('#mySearch').css("width", "0%");
+			});
+
+			//right menu icon
+			$('.mob-R-menu').on('click', function() {
+				$('#myNav').css("width", "100%");
+			});
+
+			$('#closeNav').on('click', function() {
+				$('#myNav').css("width", "0%");
+			});
+
+			//left menu icon
+			$('#openMobnav').on('click', function(){
+				$('#MobNAV').css("display", "block");
+			});
+
+			$('#closeMobnav').on('click', function(){
+				$('#MobNAV').css("display", "none");
+			});
+
+			//dropdown function
+	  		function mydropFunction() {
+	  			document.getElementById("myDropdown").classList.toggle("show");
+	  		}
+
+	  		window.onclick = function(event) {
+	  			if (!event.target.matches('.dropbtn')) {
+	  				var dropdowns = document.getElementsByClassName("dropdown-content");
+	  				var i;
+	  				for (i = 0; i < dropdowns.length; i++) {
+	  					var openDropdown = dropdowns[i];
+	  					if (openDropdown.classList.contains('show')) {
+	  						openDropdown.classList.remove('show');
+	  					}
+	  				}
+	  			}
+	  		}
+	  	</script>
+	</div>
+
+	<div class="pageHeading text-center py-5">
+		<h1><strong>House</strong></h1>
+		<h5><strong>More Details About Apartment</strong></h5>
+	</div>
+
+	<div class="container">
+		<nav aria-label="breadcrumb">
+			<ol class="breadcrumb">
+				<li class="breadcrumb-item"><a href="index.html">Home</a></li>
+				<li class="breadcrumb-item active" aria-current="page">Apartment Single</li>
+			</ol>
+		</nav>
+	</div>
+
+	<div class="banner my-5">
+		<div class="container pb-5">
+			<div class="row m-0">
+				<div class="col-md-8">
+					<a href="apartment-single.jpg" class="img-link" data-lightbox="image1">
+						<img src="apartment-single.jpg" class="img-fluid">
+					</a>
+
+					<div class="owl-carousel my-3">
+						<div class="item">
+							<a href="apartment-single-1.jpg" class="img-link" data-lightbox="image1">
+								<img src="apartment-single-1.jpg">
+							</a>
+						</div>
+						<div class="item">
+							<a href="apartment-single-2.jpg" class="img-link" data-lightbox="image1">
+								<img src="apartment-single-2.jpg">
+							</a>
+						</div>
+						<div class="item">
+							<a href="apartment-single-3.jpg" class="img-link" data-lightbox="image1">
+								<img src="apartment-single-3.jpg">
+							</a>
+						</div>
+						<div class="item">
+							<a href="apartment-single-4.jpg" class="img-link" data-lightbox="image1">
+								<img src="apartment-single-4.jpg">
+							</a>
+						</div>
+						<div class="item">
+							<a href="apartment-single-5.jpg" class="img-link" data-lightbox="image1">
+								<img src="apartment-single-5.jpg">
+							</a>
+						</div>
+						<div class="item">
+							<a href="apartment-single.jpg" class="img-link" data-lightbox="image1">
+								<img src="apartment-single.jpg">
+							</a>
+						</div>
+						<script type="text/javascript">
+							$('.owl-carousel').owlCarousel({
+							    loop:false,
+							    margin:10,
+							    nav:false,
+							    dots:false,
+							    responsive:{
+							        0:{
+							            items:3
+							        },
+							        600:{
+							            items:3
+							        },
+							        1000:{
+							            items:6
+							        }
+							    }
+							})
+						</script>
+					</div>
+
+					<div class="contentHeading mt-5 mb-4 d-flex justify-content-between align-items-center">
+						<h3 class="m-0">Family Apartment</h3>
+						<h5 class="text-muted m-0"><strong>Rent/Month: $550</strong></h5>
+					</div>
+
+					<h5 class="text-muted">3000 sq-ft., 3 Bedroom, Semi-furnished, Luxurious, South facing Apartment for Rent in Rangs Malancha, Melbourne.</h5>
+
+					<p class="dash"></p>
+
+					<div class="contentHeading mt-5 mb-4">
+						<h3 class="mb-4">Price Details -</h3>
+						<h5><strong>Rent/Month: </strong><span class="text-muted">$550 (negotiable)</span></h5>
+						<h5><strong>Service Charge: </strong><span class="text-muted">8,000/= Tk per month, subject to change</span></h5>
+						<h5><strong>Security Deposit: </strong><span class="text-muted">3 month’s rent</span></h5>
+						<h5><strong>Flat Release Policy: </strong><span class="text-muted">3 months earlier notice required</span></h5>
+					</div>
+
+					<div class="contentHeading mt-5 mb-4">
+						<h3 class="mb-4">Property Details -</h3>
+						<h5 class="mb-3"><strong>Address & Area: </strong><span class="text-muted">Rangs Malancha, House-68, Road-6A (Dead End Road), Dhanmondi Residential Area.</span></h5>
+						<h5 class="mb-3"><strong>Flat Size: </strong><span class="text-muted">3000 Sq Feet.</span></h5>
+						<h5 class="mb-3"><strong>Floor: </strong><span class="text-muted">A5 (5th Floor) (6 storied Building ) (South Facing Unit)</span></h5>
+						<h5 class="mb-3"><strong>Room Category: </strong><span class="text-muted">3 Large Bed Rooms with 3 Verandas, Spacious Drawing, Dining & Family Living Room, Highly Decorated Kitchen with Store Room and Servant room with attached Toilet.</span></h5>
+						<h5 class="mb-3"><strong>Facilities: </strong><span class="text-muted">1 Modern Lift, All Modern Amenities & Semi Furnished.</span></h5>
+						<h5><strong>Additional Facilities: </strong><span class="text-muted">a. Electricity with full generator load, b. Central Gas Geyser, c. 2 Car Parking with 1 Driver’s Accommodation, d. Community Conference Hall, e. Roof Top Beautified Garden and Grassy Ground, f. Cloth Hanging facility with CC camera</span></h5>
+					</div>
+
+					<div class="contentHeading mt-5 mb-4">
+						<h3 class="mb-4">Apartment Overview-</h3>
+						<div class="row">
+							<div class="col-md-6">
+								<div class="d-flex justify-content-between my-2 p-4 bg-light">
+									<h6 class="m-0 text-muted"><strong>Deposit / Bond</strong></h6>
+									<h6 class="m-0 text-muted"><strong>$225000.00</strong></h6>
+								</div>
+								<div class="d-flex justify-content-between my-2 p-4 bg-light">
+									<h6 class="m-0 text-muted"><strong>Total Area (sq. ft)</strong></h6>
+									<h6 class="m-0 text-muted"><strong>300</strong></h6>
+								</div>
+								<div class="d-flex justify-content-between my-2 p-4 bg-light">
+									<h6 class="m-0 text-muted"><strong>Car Parking Per Space</strong></h6>
+									<h6 class="m-0 text-muted"><strong>02</strong></h6>
+								</div>
+								<div class="d-flex justify-content-between my-2 p-4 bg-light">
+									<h6 class="m-0 text-muted"><strong>Car Parking Per Space</strong></h6>
+									<h6 class="m-0 text-muted"><strong>02</strong></h6>
+								</div>
+							</div>
+							<div class="col-md-6">
+								<div class="d-flex justify-content-between my-2 p-4 bg-light">
+									<h6 class="m-0 text-muted"><strong>Computer</strong></h6>
+									<h6 class="m-0 text-muted"><strong>03</strong></h6>
+								</div>
+								<div class="d-flex justify-content-between my-2 p-4 bg-light">
+									<h6 class="m-0 text-muted"><strong>Total Floors</strong></h6>
+									<h6 class="m-0 text-muted"><strong>09</strong></h6>
+								</div>
+								<div class="d-flex justify-content-between my-2 p-4 bg-light">
+									<h6 class="m-0 text-muted"><strong>Air Condition</strong></h6>
+									<h6 class="m-0 text-muted"><strong>Yes</strong></h6>
+								</div>
+								<div class="d-flex justify-content-between my-2 p-4 bg-light">
+									<h6 class="m-0 text-muted"><strong>Air Condition</strong></h6>
+									<h6 class="m-0 text-muted"><strong>Yes</strong></h6>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="row my-5 m-0">
+						<div class="col-md-6 pl-0">
+							<h3 class="m-0 bg-light px-4 py-3"><strong class="text-muted">Indoor Features -</strong></h3>
+							<ul class="indoor-features">
+								<li>Community Hall</li>
+								<li>Safety Grills</li>
+								<li>Servants Room</li>
+								<li>Servants Toilet</li>
+								<li>Fire exit</li>
+								<li>CCTV</li>
+								<li>WASA connection</li>
+								<li>DESCO connection</li>
+								<li>TITAS GAS connection</li>
+								<li>Balcony</li>
+								<li>Inter Com</li>
+							</ul>
+						</div>
+						<div class="col-md-6 pr-0">
+							<h3 class="m-0 bg-light px-4 py-3"><strong class="text-muted">Indoor Features -</strong></h3>
+							<ul class="indoor-features">
+								<li>South Facing</li>
+								<li>Roof Top Garden</li>
+								<li>Drivers quarters</li>
+								<li>Generator</li>
+								<li>Lift</li>
+							</ul>
+						</div>
+					</div>
+
+				</div>
+				<div class="col-md-4 p-0">
+					<div class="formBorder py-5 px-3">
+						<h5><strong>BOOK THIS APARTMENT</strong></h5>
+						<form class="my-4">
+							<div class="form-group my-3">
+								<label for="fullName">Full Name</label>
+								<input type="text" class="form-control" id="fullName" placeholder="Full name">
+							</div>
+							<div class="form-group my-3">
+								<label for="number">Phone Number</label>
+								<input type="number" class="form-control" id="number" placeholder="+91 1236547890">
+							</div>
+							<div class="form-group my-3">
+								<label for="Email">Email ID</label>
+								<input type="email" class="form-control" id="Email" placeholder="example@domain.com">
+							</div>
+							<div class="form-group my-3">
+								<label for="famMember">Family Member</label>
+								<input type="number" class="form-control" id="famMember" placeholder="5">
+							</div>
+							<div class="form-group my-3">
+								<label for="children">Children</label>
+								<input type="number" class="form-control" id="children" placeholder="2">
+							</div>
+							<div class="form-group my-3">
+								<label for="message">Your Message</label>
+								<textarea class="form-control" id="message" rows="5" placeholder="Message"></textarea>
+							</div>
+							<button class="btn btn-block my-5 py-3"><strong>Request Booking</strong></button>
+						</form>
+					</div>
+
+					<div class="ad my-5">
+						<a href="#">
+							<img src="apartment-ad.png" class="img-fluid">
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="banner2 bg-light">
+		<div class="container py-5">
+			<h1 class="gradient-text text-center mb-5"><strong>Related Apartments</strong></h1>
+			<div class="card-deck my-4">
+				<div class="card">
+					<img src="apartment-one.png" class="img-fluid card-img-top rounded">
+					<div class="card-body">
+						<h5 class="card-title"><strong>Family Apartment</strong></h5>
+						<h6 class="text-muted"><i class="fas fa-map-marker-alt mr-2"></i>Dhanmondi, Dhaka</h6>
+					</div>
+					<div class="card-footer " style="background-color: #ffffff;">
+						<span class="mr-2 text-muted"><i class="fas fa-bed mr-2"></i>3 Bedrooms</span>
+						<span class="mx-2 text-muted"><i class="fas fa-bath mr-2"></i>2 Bathrooms</span>
+						<div class="row pt-3">
+							<div class="col-6">
+								<h5><strong>&#36;200</strong></h5>
+							</div>
+							<div class="col-6 d-flex justify-content-end">
+								<span class="text-muted"><i class="fas fa-share-alt mr-3"></i><i class="far fa-star"></i></span>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="card">
+					<img src="apartment-two.png" class="img-fluid card-img-top rounded">
+					<div class="card-body">
+						<h5 class="card-title"><strong>Family Apartment</strong></h5>
+						<h6 class="text-muted"><i class="fas fa-map-marker-alt mr-2"></i>Dhanmondi, Dhaka</h6>
+					</div>
+					<div class="card-footer " style="background-color: #ffffff;">
+						<span class="mr-2 text-muted"><i class="fas fa-bed mr-2"></i>3 Bedrooms</span>
+						<span class="mx-2 text-muted"><i class="fas fa-bath mr-2"></i>2 Bathrooms</span>
+						<div class="row pt-3">
+							<div class="col-6">
+								<h5><strong>&#36;200</strong></h5>
+							</div>
+							<div class="col-6 d-flex justify-content-end">
+								<span class="text-muted"><i class="fas fa-share-alt mr-3"></i><i class="far fa-star"></i></span>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="card">
+					<img src="apartment-three.png" class="img-fluid card-img-top rounded">
+					<div class="card-body">
+						<h5 class="card-title"><strong>Family Apartment</strong></h5>
+						<h6 class="text-muted"><i class="fas fa-map-marker-alt mr-2"></i>Dhanmondi, Dhaka</h6>
+					</div>
+					<div class="card-footer " style="background-color: #ffffff;">
+						<span class="mr-2 text-muted"><i class="fas fa-bed mr-2"></i>3 Bedrooms</span>
+						<span class="mx-2 text-muted"><i class="fas fa-bath mr-2"></i>2 Bathrooms</span>
+						<div class="row pt-3">
+							<div class="col-6">
+								<h5><strong>&#36;200</strong></h5>
+							</div>
+							<div class="col-6 d-flex justify-content-end">
+								<span class="text-muted"><i class="fas fa-share-alt mr-3"></i><i class="far fa-star"></i></span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="banner3 py-5">
+		<div class="container">
+			<div class="row text-white d-flex align-items-center">
+				<div class="col-md-8">
+					<h2><strong>Do you want to Rent your House</strong></h2>
+					<h4><strong>Call us and list your property here</strong></h4>
+				</div>
+				<div class="col-md-4 text-white">
+					<h4><a href="#">+880123456578</a></h4>
+					<h4><a href="#">company@gmail.com</a></h4>
+					<button class="btn contactUs px-4 py-2 my-3"><h5 class="m-0">Contact Us</h5></button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="banner4 pt-5 my-5">
+		<div class="insideBanner4 py-5 text-center">
+			<h1><strong>We Are Available For You 24/7</strong></h1>
+			<h6>OUR ONLINE SUPPORT SERVICE IS ALWAYS 24 HOURS</h6>
+		</div>
+		<div class="row m-0">
+			<div class="col-md-7">
+				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.838528406827!2d144.95358631514864!3d-37.817250979751734!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad65d4dd5a05d97%3A0x3e64f855a564844d!2s121%20King%20St%2C%20Melbourne%20VIC%203000%2C%20Australia!5e0!3m2!1sen!2sin!4v1636834197238!5m2!1sen!2sin" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+			</div>
+			<div class="col-md-5">
+				<div class="row">
+					<div class="col-md-6 my-4">
+						<h3 class="mb-3"><i class="fas fa-address-book mr-3"></i>Address</h3>
+						<h5>112/B - Road 121, King/St Melbourne Australia</h5>
+					</div>
+					<div class="col-md-6 my-4">
+						<h3 class="mb-3"><i class="fas fa-envelope mr-3"></i>Mail</h3>
+						<h5>yourmail@domain.com</h5>
+						<h5>houserent@domain.com</h5>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-6 my-4">
+						<h3 class="mb-3"><i class="fas fa-phone-square-alt mr-3"></i>Call</h3>
+						<h5>+99 0215469875</h5>
+						<h5>666 35874692050</h5>
+					</div>
+					<div class="col-md-6 my-4">
+						<h3 class="mb-3"><i class="fas fa-user-circle mr-3"></i>Social Accounts</h3>
+						<a href="#"><i class="fab fa-facebook mr-3"></i></a>
+						<a href="#"><i class="fab fa-twitter mr-3"></i></a>
+						<a href="#"><i class="fab fa-instagram mr-3"></i></a>
+						<a href="#"><i class="fab fa-google-plus-g"></i></h5></a>
+					</div>
+				</div>
+			</div>
+		</div>		
+	</div>
+
+	<div class="banner10">
+		<div class="main-footer pt-5">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-4 my-5">
+						<h5 class="ftr"><strong>About House Rent</strong></h5>
+						<hr>
+						<img src="footer-logo.png" class="img-fluid">
+						<h6 class="text-muted my-4" style="line-height: 1.5;">We Provide Premium Word Press, Ghost and HTML template. Our Perm tritium Templates is, develop gaped in a way so that the clients find Support. Themes are developed in a way so that the clients find.</h6>
+						<button class="btn ftr-btn px-4 py-2 my-3"><h5 class="m-0">More</h5></button>
+					</div>
+					<div class="col-md-4 my-5">
+						<h5 class="ftr"><strong>Place Category</strong></h5>
+						<hr>
+						<ul>
+							<li class="my-3"><strong>Flat for Rent<span><a href="#">&nbsp;Francis</a></span></strong></li>
+							<li class="my-3"><strong>Flat for Rent<span><a href="#">&nbsp;Collins St</a></span></strong></li>
+							<li class="my-3"><strong>Flat for Rent<span><a href="#">&nbsp;Rose Ln</a></span></strong></li>
+							<li class="my-3"><strong>Flat for Rent<span><a href="#">&nbsp;Cosgrave Ln</a></span></strong></li>
+							<li class="my-3"><strong>Flat for Rent<span><a href="#">&nbsp;Bourke St</a></span></strong></li>
+							<li class="my-3"><strong>Flat for Rent<span><a href="#">&nbsp;Flienders Ln</a></span></strong></li>
+						</ul>
+					</div>
+					<div class="col-md-4 my-5">
+						<h5 class="ftr"><strong>Instagram Images</strong></h5>
+						<hr>
+						<div class="row">
+							<div class="col-md-4 col-6  d-flex justify-content-end">
+								<a href="#">
+									<img src="instagram-one.png" class="img-fluid">
+								</a>
+							</div>
+							<div class="col-md-4 col-6 d-flex justify-content-start">
+								<a href="#">
+									<img src="instagram-two.png" class="img-fluid">
+								</a>
+							</div>
+							<div class="col-md-4 col-6 d-flex justify-content-end">
+								<a href="#">
+									<img src="instagram-three.png" class="img-fluid">
+								</a>
+							</div>
+							<div class="col-md-4 col-6 d-flex justify-content-start">
+								<a href="#">
+									<img src="instagram-four.png" class="img-fluid">
+								</a>
+							</div>
+							<div class="col-md-4 col-6 d-flex justify-content-end">
+								<a href="#">
+									<img src="instagram-five.png" class="img-fluid">
+								</a>
+							</div>
+							<div class="col-md-4 col-6 d-flex justify-content-start">
+								<a href="#">
+									<img src="instagram-six.png" class="img-fluid">
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<hr>
+				<div class="text-center my-4">
+					<h6><strong>Copyright &copy;2017<span>&nbsp;<a href="#" class="ftr">HTMLguru</a></span></strong></h6>
+				</div>
+			</div>	
+		</div>
+	</div>
+
+	<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
